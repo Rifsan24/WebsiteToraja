@@ -1,0 +1,95 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+.features {
+  .section-title h2 {
+    display: inline-block;
+    /* Biar panjang garis sesuai teks */
+    border-bottom: 3px solid blue;
+    /* Warna dan ketebalan garis */
+    padding-bottom: 5px;
+    /* Jarak antara teks dan garis */
+  }
+
+  .feature-item {
+    padding: 30px;
+    background: color-mix(in srgb, var(--accent-color), transparent 96%);
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+
+    .feature-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+
+      .icon {
+        flex-shrink: 0;
+
+        i {
+          font-size: 32px;
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .content h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      font-size: 15px;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 30px;
+    }
+
+    .content .feature-link {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--accent-color);
+      transition: all 0.3s ease-in-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      i {
+        font-size: 14px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover {
+        color: color-mix(in srgb, var(--accent-color), transparent 25%);
+
+        i {
+          transform: translateX(5px);
+        }
+      }
+    }
+
+    &:hover {
+      border-color: var(--accent-color);
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .feature-item {
+      padding: 20px;
+
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .feature-item {
+      .feature-content {
+        gap: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services {
+  .section-title h2 {
+    display: inline-block;
+    /* Biar panjang garis sesuai teks */
+    border-bottom: 3px solid blue;
+    /* Warna dan ketebalan garis */
+    padding-bottom: 5px;
+    /* Jarak antara teks dan garis */
+  }
+
+  background: #f9fbfc;
+  padding: 60px 0;
+
+  .section-title {
+    text-align: center;
+
+    h2 {
+      font-size: 2rem; // Ukuran judul "LAYANAN"
+      font-weight: 700;
+      color: #0c1d36;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem; // Ukuran teks paragraf "Tarif layanan sesuai..."
+      font-weight: 400;
+      color: #0c1d36;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+  }
+
+  .icon-box {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      font-size: 1.25rem; // dikecilin sedikit dari 1.5rem
+      color: #0057b8;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #28a745;
+      margin-bottom: 10px;
+
+      .highlight {
+        font-size: 1.5rem; // sebelumnya 2rem, sekarang lebih proporsional
+        color: #28a745;
+      }
+    }
+
+    .description {
+      font-size: 0.95rem;
+      color: #495057;
+      margin-bottom: 15px;
+    }
+
+    .btn-detail {
+      background: #0057b8;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      display: inline-block;
+      font-size: 0.9rem;
+
+      &:hover {
+        background-color: #00408f;
+        text-decoration: none;
+      }
+    }
+  }
+}
