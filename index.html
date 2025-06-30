@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Website BMKG Toraja</title>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Favicons -->
+<link rel="icon" href="assets/img/bg/favicon.ico" type="image/x-icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+<link href="assets/vendor/aos/aos.css" rel="stylesheet"/>
+<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet"/>
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
+<link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"/>
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<!-- Main CSS File -->
+<link href="../assets/css/main.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+
+<style>
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px grey;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+  .card.shadow-sm.active {
+    background-color: blue;
+    opacity: 50%;
+    color: white;
+  }
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  // initialize the map on the "map" div with a given center and zoom
+  const map = new Map('radarmap', {
+    center: [51.505, -0.09],
+    zoom: 13
+  });
+</script>
+</head>
+<body class="index-page">
+<header class="header d-flex align-items-center sticky-top" id="header">
+<div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<a class="logo d-flex align-items-center me-auto me-xl-0" href="index.html">
+<img alt="Logo BMKG" class="logo-img" src="assets/img/about/BMKG (1).png"/>
+<h1 class="sitename ms-2">BMKG TORAJA</h1>
+</a>
+<!-- Profil -->
+<nav class="navmenu" id="navmenu">
+<ul>
+<li class="dropdown"><a style="cursor: pointer;"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+<ul>
+<li><a class="nav-link scrollto" href="sejarah.html">Sejarah</a></li>
+<li><a href="visimisi.html">Visi dan Misi</a></li>
+<li><a href="struktur.html">Struktur Organisasi</a></li>
+<li><a href="daftar.html">Daftar Pegawai</a></li>
+<li><a href="https://drive.google.com/drive/folders/1OhwSHFOfl5U1P5pLLDz1-w8ZB1TnrVxy" target="_blank">Buletin</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+</li>
+<!-- End Profil -->
+<!-- Penerbangan -->
+<li class="dropdown">
+<a style="cursor: pointer;"><span>Penerbangan</span> <i class="bi bi-chevron-down"></i></a>
+<ul>
+<li><a href="https://widis.bmkg.go.id/g/Bandara_Toraja" target="_blank">Cuaca Bandara</a></li>
+<li><a href="https://www.bmkg.go.id/cuaca/bandara/potensi-awan-cb" target="_blank">Potensi Awan CB</a></li>
+<li><a href="https://web-aviation.bmkg.go.id/model/windtemp/850_00.png?id=556591" target="_blank">Wind/Temp</a></li>
+<li><a href="https://web-aviation.bmkg.go.id/model/mediumsigwx/2025/05/sigwx_202505081200.jpeg?id=226999" target="_blank">Medium SIGWX</a></li>
+<li><a href="https://web-aviation.bmkg.go.id/model/highsigwx/20250507_1800_PGGE05_EGRR.png?id=4813846" target="_blank">High SIGWX</a></li>
+<li><a href="https://widis.bmkg.go.id/g/Bandara_Toraja" target="_blank">Ina-SIAM</a></li>
+</ul>
+</li>
+<!-- End Penerbangan -->
+<!-- Info Publik -->
+<li class="dropdown">
+<a style="cursor: pointer;"><span>Publik</span> <i class="bi bi-chevron-down"></i></a>
+<ul>
+<li class="dropdown">
+<a href="#"><span>Prakiraan Cuaca Kecamatan</span> <i class="bi bi-chevron-right"></i></a>
+<ul>
+<li><a href="https://www.bmkg.go.id/cuaca/prakiraan-cuaca/73.18?Kab=Tana%20Toraja&amp;AreaID=501292" target="_blank">Tana Toraja</a></li>
+<li><a href="https://www.bmkg.go.id/cuaca/prakiraan-cuaca/73.26" target="_blank">Toraja Utara</a></li>
+</ul>
+</li>
+<li><a href="prakiraanjalurdarat.html" target="_blank">Prakiraan Cuaca Jalur Darat</a></li>
+<li><a href="https://www.bmkg.go.id/cuaca/peringatan-dini-cuaca" target="_blank">Peringatan Dini Cuaca</a></li>
+<li><a href="https://www.bmkg.go.id/cuaca/potensi-cuaca-ekstrem" target="_blank">Potensi Cuaca Ekstrem 3 Harian</a></li>
+<li><a href="https://www.bmkg.go.id/gempabumi" target="_blank">Gempa Bumi Terkini</a></li>
+</ul>
+</li>
+<!-- End Info Publik -->
+<!-- Pelayanan -->
+<li class="dropdown"><a style="cursor: pointer;"><span>Pelayanan</span> <i class="bi bi-chevron-down"></i></a>
+<ul>
+<li><a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="assets/img/alur.jpg" title="Alur Pelayanan Data">Alur Pelayanan Data</a></li>
+<li><a class="nav-link scrollto" href="#tarifpnbp">Informasi Tarif PNBP</a></li>
+<li><a class="nav-link scrollto" href="https://docs.google.com/forms/d/e/1FAIpQLSdPU4wNJz1GIsewffFhmerw0PDydSZQOesjOmNl7DRPdoHXUw/viewform">Formulir Permohonan Data</a></li>
+</ul>
+</li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdPU4wNJz1GIsewffFhmerw0PDydSZQOesjOmNl7DRPdoHXUw/viewform" target="_blank">Survei</a></li>
+<li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+</ul>
+</nav>
+<div class="header-social-links">
+<a class="whatsapp" href="https://wa.me/628114209533"target="_blank"><i class="bi bi-whatsapp"></i></a>
+<a class="facebook" href="https://www.facebook.com/share/15fMkZVo8p/"target="_blank"><i class="bi bi-facebook"></i></a>
+<a class="instagram" href="https://www.instagram.com/bmkgtoraja/"target="_blank"><i class="bi bi-instagram"></i></a>
+</div>
+<!-- End Pelayanan -->
+</div>
+</header>
+<main class="main">
+<!-- Hero Section -->
+<section class="hero section" id="hero">
+<img alt="" class="" data-aos="fade-in" src="assets/img/bg/bgtoraja3.png"/>
+<div class="container">
+<div class="row justify-content-center" data-aos="zoom-out">
+<div class="col-xl-7 col-lg-9 text-center">
+<h1>Selamat Datang di Website BMKG TORAJA</h1>
+<p>Sistem Pelayanan Informasi Stasiun Meteorologi Toraja</p>
+</div>
+</div>
+<div class="text-center" data-aos="zoom-out" data-aos-delay="100">
+<a class="btn-get-started" href="#about">Tentang Kami</a>
+</div>
+<!-- Kaleidoskop, Buletin, Cuaca Bandara, Formulir data -->
+<div class="row gy-4 mt-5">
+<div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="100">
+<a class="text-decoration-none" href="kaleidoskop.html" target="_blank">
+<div class="icon-box h-100 text-center">
+<div class="icon"><i class="bi bi-cloud-sun"></i></div>
+<h4 class="title text-dark">Kaleidoskop Cuaca Toraja</h4>
+<p class="description text-secondary">Berisikan tentang rangkuman informasi cuaca dalam satu bulan terakhir di Toraja</p>
+</div>
+</a>
+</div>
+<div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="200">
+<a class="text-decoration-none" href="https://drive.google.com/drive/folders/1OhwSHFOfl5U1P5pLLDz1-w8ZB1TnrVxy" target="_blank">
+<div class="icon-box h-100 text-center">
+<div class="icon"><i class="bi bi-newspaper"></i></div>
+<h4 class="title text-dark">Informasi Buletin</h4>
+<p class="description text-secondary">Berisikan tentang buletin yang telah diterbitkan oleh Stasiun Meteorologi Toraja</p>
+</div>
+</a>
+</div>
+<div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="300">
+<a class="text-decoration-none" href="https://widis.bmkg.go.id/g/Bandara_Toraja" target="_blank">
+<div class="icon-box h-100 text-center">
+<div class="icon"><i class="bi bi-airplane"></i></div>
+<h4 class="title text-dark">Informasi Cuaca Bandara Toraja</h4>
+<p class="description text-secondary">Berisikan tentang informasi cuaca di Bandara Toraja</p>
+</div>
+</a>
+</div>
+<div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="400">
+<a class="text-decoration-none" href="formulirdata.html" target="_blank">
+<div class="icon-box h-100 text-center">
+<div class="icon"><i class="bi bi-journal-text"></i></div>
+<h4 class="title text-dark">Alur Permohonan Data</h4>
+<p class="description text-secondary">Berisikan tentang tata cara dan prosedur pelayanan data di BMKG</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+
+<!-- End Kaleidoskop, Buletin, Cuaca Bandara, Formulir data -->
+</section><!-- /Hero Section -->
+
+<section class="container my-5">
+  <h4 class="mb-3">CEK KONDISI CUACA DILOKASI ANDA</h4>
+  <div class="row">
+    <div class="col">
+      <select class="form-select mb-3 pilih-kabupaten">
+        <option value="">Pilih Kabupaten</option>
+      </select>
+    </div>
+    <div class="col">
+      <select class="form-select mb-3 pilih-kecamatan" disabled>
+        <option value="">Pilih Kecamatan</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-8 mb-2">
+      <div class="row">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div>
+                <small>Cuaca Saat Ini</small>
+                <small class="text-muted d-block current-local_datetime">-</small>
+              </div>
+
+              <div class="px-2">
+                <div class="row mt-3 align-items-center">
+                  <div class="col-12 d-flex align-items-center justify-content-around p-4">
+                    <div class="d-flex justify-content-center gap-2">
+                      <img width="180" height="180" class="current-image" alt="">
+                    </div>
+                    <div>
+                      <p class="fs-1 mb-0"><span class="current-temperature">-</span>°C</p>
+                      <h5 class="mb-0 current-weather_desc">-</h5>
+                      <p class="text-muted mb-0">Terasa seperti: <br><span class="current-temperature_count">-</span>°C</p>
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-7 text-center py-5">
+                    Tidak ada peringatan cuaca buruk saat ini
+                  </div> -->
+                </div>
+
+                <div class="row mt-3 py-4">
+                  <div class="col text-center">
+                    <div class="d-flex gap-2 justify-content-center mb-2">
+                      <h5 class="mb-0">Angin</h5>
+                    </div>
+                    <p class="mb-0"><span class="current-wind_speed">-</span> Km/Jam</p>
+                  </div>
+                  <div class="col text-center">
+                    <div class="d-flex gap-2 justify-content-center mb-2">
+                      <h5 class="mb-0">Arah Angin</h5>
+                    </div>
+                    <p class="mb-0 d-flex gap-2 justify-content-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" style="transform: rotate(90deg);">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 19 4 12l16-7-2 7z"></path>
+                        <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10.5 15.5 13 12l-2.5-3.5"></path>
+                      </svg>
+                      <span class="current-wind_direction">-</span>
+                    </p>
+                  </div>
+                  <div class="col text-center">
+                    <div class="d-flex gap-2 justify-content-center mb-2">
+                      <h5 class="mb-0">Kelembapan</h5>
+                    </div>
+                    <p class="mb-0"><span class="current-humidity">-</span>%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="d-flex gap-2 my-3 align-items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 25" width="24" height="24">
+      <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 9.2-3.044 4.565a1 1 0 0 1-1.727-.107l-.458-.917a1 1 0 0 0-1.727-.108L7 17.199"></path>
+      <rect width="18" height="18" x="3" y="3.199" stroke="#000" stroke-width="2" rx="2"></rect>
+    </svg>
+    <h4 class="mb-0">PRAKIRAAN CUACA</h4>
+  </div>
+  <div class="row gap-2">
+    <div class="col-12">
+      <ul class="nav nav-tabs d-flex gap-1 cuaca-card border-0" id="myTab" role="tablist"></ul>
+    </div>
+    <div class="col-12">
+      <div class="m-2">Per Jam</div>
+      <div class="tab-content cuaca-tab-content overflow-x-scroll pb-2"></div>
+    </div>
+  </div>
+</section>
+
+<section id="halfmarathon" class="cuaca-section" style="margin-top: 3rem; padding: 2rem; background: #f4f8fb;">
+  <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">🏃‍♂️ Prediksi Cuaca Half Marathon Toraja 2025 🌤️</h2>
+  <p style="color: #444;">Prakiraan cuaca untuk wilayah <strong>Makale</strong> pagi - malam hari saat event berlangsung.</p>
+  <hr style="margin: 1.5rem auto; max-width: 200px; border-top: 2px solid #ddd;">
+  <div class="cuaca-halfmarathon-cards" id="cuaca-halfmarathon-cards" style="margin-top: 1.5rem;">
+    <!-- Kartu cuaca akan muncul otomatis -->
+  </div>
+</section>
+
+
+<style>
+  .cuaca-section {
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    background: #f9fafb;
+  }
+
+  .cuaca-halfmarathon-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .cuaca-halfmarathon-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px #ddd;
+    padding: 1rem;
+    width: 160px;
+    transition: 0.2s ease;
+  }
+
+  .cuaca-halfmarathon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .cuaca-jam {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  .cuaca-temp {
+    font-size: 1.2rem;
+    margin: 0.25rem 0;
+  }
+
+  .cuaca-info {
+    font-size: 0.9rem;
+    color: #666;
+  }
+</style>
+
+<script>
+  (function () {
+    const iconMap = {
+      "Cerah": "☀️",
+      "Cerah Berawan": "⛅",
+      "Berawan": "☁️",
+      "Berawan Tebal": "🌥️",
+      "Hujan Ringan": "🌦️",
+      "Hujan": "🌧️",
+      "Hujan Lebat": "🌩️"
+    };
+
+    fetch("https://cuaca.bmkg.go.id/api/df/v1/forecast/adm?adm3=73.18.05")
+      .then(res => res.json())
+      .then(data => {
+        const cuacaPerJam = data.data?.[0]?.cuaca?.[0] || [];
+        const container = document.getElementById("cuaca-halfmarathon-cards");
+        if (!Array.isArray(cuacaPerJam)) {
+          container.innerHTML = `<p>Data cuaca tidak tersedia.</p>`;
+          return;
+        }
+
+        cuacaPerJam.forEach(item => {
+          const waktu = item.local_datetime?.slice(11, 16) || "--:--";
+          const card = document.createElement("div");
+          card.className = "cuaca-halfmarathon-card";
+
+          card.innerHTML = `
+            <div class="cuaca-jam">${waktu} WITA</div>
+            <div style="font-size: 2rem;">${iconMap[item.weather_desc] || "❓"}</div>
+            <div class="cuaca-temp">${item.t ?? "-"}°C</div>
+            <div class="cuaca-info">${item.weather_desc ?? "-"}</div>
+            <div class="cuaca-info">💧 ${item.hu ?? "-"}%</div>
+            <div class="cuaca-info">🌬️ ${item.wd ?? "-"} ${item.ws ?? "-"} kt</div>
+          `;
+
+          container.appendChild(card);
+        });
+      })
+      .catch(err => {
+        console.error("Gagal muat data Half Marathon:", err);
+        document.getElementById("cuaca-halfmarathon-cards").innerHTML = `<p>Data cuaca tidak tersedia.</p>`;
+      });
+  })();
+</script>
+
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2b6cb0;
+            --accent: #e63946;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fb;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .section-title p {
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Pelayanan Section */
+        .pelayanan-section {
+            padding: 80px 0;
+            background: linear-gradient(to bottom, #ffffff 60%, #f1f5f9 40%);
+        }
+        
+        .service-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            background: white;
+            border: none;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+            color: white;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-card .card-body {
+            padding: 30px;
+        }
+        
+        .service-card h3 {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: #6c757d;
+            margin-bottom: 25px;
+        }
+        
+        .btn-service {
+            background: var(--primary);
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-service:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(43, 108, 176, 0.3);
+        }
+        
+        /* PNBP Section */
+        .pnbp-section {
+            padding: 80px 0;
+            background: #f1f5f9;
+        }
+        
+        .pnbp-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            height: 100%;
+            background: white;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .pnbp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+        
+        .pnbp-header {
+            padding: 25px 30px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .pnbp-header h4 {
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .pnbp-body {
+            padding: 30px;
+        }
+        
+        .price-badge {
+            display: inline-block;
+            background: #e6f7ff;
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border: 1px solid #b3e0ff;
+        }
+        
+        .pnbp-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        
+        .pnbp-features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+            color: #495057;
+        }
+        
+        .pnbp-features li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 8px;
+            color: var(--accent);
+        }
+        
+        .btn-pnbp {
+            background: var(--primary);
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .btn-pnbp:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(43, 108, 176, 0.3);
+        }
+        
+        .btn-pnbp i {
+            transition: transform 0.3s;
+        }
+        
+        .btn-pnbp:hover i {
+            transform: translateX(5px);
+        }
+        
+        .alur-container {
+            margin-top: 50px;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .alur-title {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .alur-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .step-card {
+            text-align: center;
+            padding: 25px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            height: 100%;
+            transition: all 0.3s;
+        }
+        
+        .step-card:hover {
+            background: white;
+            border-color: #cbd5e1;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .step-card h5 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .step-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 767px) {
+            .pelayanan-section, .pnbp-section {
+                padding: 50px 0;
+            }
+            
+            .section-title {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Pelayanan Section -->
+    <section class="pelayanan-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Layanan Permohonan Data</h2>
+                <p>Kami menyediakan layanan permohonan data meteorologi untuk berbagai kebutuhan. Silakan pilih kategori pemohon sesuai dengan kebutuhan Anda.</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3>Form Permohonan Data</h3>
+                            <p>Layanan ini ditujukan untuk semua jenis pemohon termasuk masyarakat umum, mahasiswa, dan instansi kerjasama BMKG. Silakan isi formulir berikut untuk mengajukan permohonan data sesuai kebutuhan Anda.</p>
+                            <p><strong>Kategori pemohon:</strong></p>
+                            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                                <span class="badge bg-primary bg-opacity-10 text-primary py-2 px-3">Masyarakat Umum</span>
+                                <span class="badge bg-success bg-opacity-10 text-success py-2 px-3">Mahasiswa</span>
+                                <span class="badge bg-info bg-opacity-10 text-info py-2 px-3">Instansi Kerjasama</span>
+                            </div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPU4wNJz1GIsewffFhmerw0PDydSZQOesjOmNl7DRPdoHXUw/viewform" 
+                               class="btn-service">
+                                <i class="bi bi-pencil-square me-1"></i> Ajukan Permohonan Data
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informasi Tarif PNBP -->
+    <section class="pnbp-section" id="tarifpnbp">
+        <div class="container">
+            <div class="section-title">
+                <h2>Informasi Tarif PNBP</h2>
+                <p>Tarif layanan sesuai dengan Peraturan Pemerintah (PP) tentang Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Badan Meteorologi, Klimatologi, dan Geofisika.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="pnbp-card">
+                        <div class="pnbp-header">
+                            <h4>Perka 0 Rupiah</h4>
+                        </div>
+                        <div class="pnbp-body">
+                            <div class="price-badge">Rp 0</div>
+                            <p>Syarat dan Tata Cara Pengenaan Tarif Rp.0,00 (Nol Rupiah) Atas Jenis Penerimaan Negara Bukan Pajak Terhadap Kegiatan Tertentu di Lingkungan BMKG.</p>
+                            
+                            <ul class="pnbp-features">
+                                <li>Ditujukan untuk mahasiswa dan penelitian akademis</li>
+                                <li>Membutuhkan surat pengantar dari institusi pendidikan</li>
+                                <li>Proposal penelitian yang disetujui</li>
+                                <li>Fotokopi KTM dan KTP yang masih berlaku</li>
+                                <li>Surat pernyataan penggunaan data untuk tujuan akademis</li>
+                            </ul>
+                            
+                            <a href="https://www.instagram.com/p/CVRjV0mp8wl/" target="_blank" class="btn-pnbp">
+                                <i class="bi bi-play-circle me-1"></i> Lihat Video Alur
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="pnbp-card">
+                        <div class="pnbp-header">
+                            <h4>Tarif PNBP</h4>
+                        </div>
+                        <div class="pnbp-body">
+                            <div class="price-badge">Sesuai Peraturan</div>
+                            <p>Peraturan Pemerintah Republik Indonesia Nomor 47 Tahun 2018 tentang Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak (PNBP) yang berlaku pada Badan Meteorologi Klimatologi dan Geofisika (BMKG).</p>
+                            
+                            <ul class="pnbp-features">
+                                <li>Ditujukan untuk perusahaan dan instansi komersial</li>
+                                <li>Tarif berdasarkan jenis data dan durasi penggunaan</li>
+                                <li>Perlu melampirkan surat permohonan resmi</li>
+                                <li>Fotokopi KTP pemohon dan surat kuasa jika diwakilkan</li>
+                                <li>Pembayaran melalui mekanisme PNBP yang berlaku</li>
+                            </ul>
+                            
+                            <a href="assets/fileperka/tarifpnbp.pdf" target="_blank" class="btn-pnbp">
+                                <i class="bi bi-file-earmark-pdf me-1"></i> Lihat Detail Peraturan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Alur Pelayanan -->
+            <div class="alur-container mt-5">
+                <h3 class="alur-title">Alur Pelayanan Data</h3>
+                
+                <div class="row g-4">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h5>Pengajuan Permohonan</h5>
+                            <p>Isi formulir permohonan online atau datang langsung ke kantor dengan membawa berkas yang diperlukan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-6">
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h5>Verifikasi Berkas</h5>
+                            <p>Petugas kami akan memverifikasi kelengkapan dokumen dan kebutuhan data yang diminta</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-6">
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h5>Proses Administrasi</h5>
+                            <p>Proses administrasi dan penentuan tarif sesuai jenis permohonan (PNBP atau non-PNBP)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-6">
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <h5>Penerimaan Data</h5>
+                            <p>Data akan diserahkan sesuai kesepakatan, baik secara langsung maupun melalui email</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="assets/img/alur.jpg" class="btn btn-outline-primary" data-lightbox="alur" data-title="Alur Pelayanan Data">
+                        <i class="bi bi-image me-2"></i> Lihat Diagram Alur Pelayanan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script>
+        // Inisialisasi lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': "Gambar %1 dari %2"
+        });
+    </script>
+
+<!-- ===== FAQ Section ===== -->
+<section class="faq" id="faq">
+<div class="container section-title" data-aos="fade-up">
+<h2>F.A.Q</h2>
+</div>
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+<!-- ITEM 1 -->
+<div class="faq-item">
+<button class="faq-header">
+<h3>Bagaimana Cara Mengajukan Permohonan Layanan Informasi di Kantor BMKG Toraja?</h3>
+<i class="faq-toggle bi bi-chevron-right"></i>
+</button>
+<div class="faq-content">
+<p>
+Datang langsung ke Kantor BMKG Toraja di lingkungan Bandara Toraja, Mengkendek, Tana Toraja, Sulawesi Selatan, Kirim email ke : stamet.toraja@bmkg.go.id , 
+atau hubungi +62 811-4209-533 dengan membawa : Surat Permohonan yang ditanda tangani (jika dari perusahaan, 
+dibubuhkan stempel perusahaan), Surat tugas (jika dari perusahaan menugaskan org lain untuk mengurus permohonan ke BMKG), 
+dan Fotokopi KTP pemohon.
+</p>
+</div>
+</div>
+<!-- END ITEM 1 -->
+<!-- ITEM 2 -->
+<div class="faq-item">
+<button class="faq-header">
+<h3>Bagaimana cara mengajukan permohonan layanan bagi mahasiswa?</h3>
+<i class="faq-toggle bi bi-chevron-right"></i>
+</button>
+<div class="faq-content">
+  <p>Mahasiswa diberlakukan tarif nol rupiah dengan syarat kelengkapan sebagai berikut:</p>
+  <ol>
+    <li>Surat pengantar (sesuai contoh A) lampiran link di bawah,</li>
+    <li>Surat pernyataan (sesuai contoh B) lampiran link di bawah,</li>
+    <li>Surat permohonan (sesuai contoh C) lampiran link di bawah,</li>
+    <li>Proposal penelitian yang sudah dijilid rapi disertai dengan lembar pengesahan dari dosen, dan</li>
+    <li>Fotokopi KTM dan KTP. Untuk keterangan lebih lanjut dapat melihat pada PERKA Kepala BMKG pada halaman tarif layanan.</li>
+  </ol>
+</div>
+</div>
+<!-- END ITEM 2 -->
+ <div class="faq-item">
+<button class="faq-header">
+<h3>Bagaimanakah jam operasional dan pelayanan BMKG Toraja?</h3>
+<i class="faq-toggle bi bi-chevron-right"></i>
+</button>
+<div class="faq-content">
+<p>
+Hari : Senin s/d Jumat, waktu : 09.00 s/d 15.00 WITA, dan istirahat : 12.00 s/d 13.00 WITA
+</p>
+</div>
+</div>
+
+ <div class="faq-item">
+<button class="faq-header">
+<h3>Apakah pemohon bisa mengajukan permohonan data tanpa harus datang ke kantor BMKG Toraja?</h3>
+<i class="faq-toggle bi bi-chevron-right"></i>
+</button>
+<div class="faq-content">
+<p>
+Bisa, Pelanggan harus melampirkan berkas permohonan yang lengkap dan sudah ditandatangani dalam bentuk pdf. 
+Kemudian mengisi pada formulir pemohonan data pada menu pelayanan. Apabila mengalami kesulitan dalam 
+mengunggah file permohonan pada formulir, 
+pelanggan dapat mengirimkannya melalui email ke stamet.toraja.bmkg.go.id atau WA ditujukan ke 0811-4209-533.
+</p>
+</div>
+</div>
+<!-- Tambah item lain sesuka hati -->
+</div>
+</div>
+</div>
+</section>
+<!-- End FAQ -->
+<!-- Features Section - Diperbarui -->
+<section class="features section" id="features">
+  <div class="container">
+    <div class="section-title text-center mb-5">
+      <h2>Penginderaan Jauh</h2>
+      <p class="lead">Data satelit terkini untuk pemantauan cuaca wilayah Toraja</p>
+    </div>
+    
+    <div class="row gy-4">
+      <!-- HIMAWARI - Diperbarui -->
+      <div class="col-lg-3 col-md-6">
+        <div class="remote-card shadow-sm h-100">
+          <div class="remote-header bg-primary text-white p-3">
+            <h5 class="mb-0">Citra Satelit Himawari-9</h5>
+            <small>Update Terakhir: <span class="update-time">-</span></small>
+          </div>
+          <div class="remote-body p-3">
+            <div class="remote-image-container">
+              <img src="https://satelit.bmkg.go.id/IMAGE/ANIMASI/H08_EH_Sulsel_m18.gif" 
+                   class="img-fluid remote-image" 
+                   alt="Citra Satelit Himawari"
+                   data-source="https://satelit.bmkg.go.id/IMAGE/ANIMASI/H08_EH_Sulsel_m18.gif">
+              <div class="remote-overlay">
+                <button class="btn btn-sm btn-light refresh-btn">
+                  <i class="bi bi-arrow-clockwise"></i> Refresh
+                </button>
+              </div>
+            </div>
+            <div class="remote-info mt-3">
+              <p class="small mb-1">Wilayah: Sulawesi Selatan</p>
+              <p class="small mb-0">Resolusi: 2km</p>
+            </div>
+          </div>
+          <div class="remote-footer p-3 bg-light">
+            <a href="https://satelit.bmkg.go.id/" target="_blank" class="btn btn-sm btn-outline-primary w-100">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Lihat Detail
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- KEBAKARAN HUTAN - Diperbarui -->
+      <div class="col-lg-3 col-md-6">
+        <div class="remote-card shadow-sm h-100">
+          <div class="remote-header bg-danger text-white p-3">
+            <h5 class="mb-0">Potensi Kebakaran Hutan</h5>
+            <small>Indeks: <span class="danger-level">Sedang</span></small>
+          </div>
+          <div class="remote-body p-3">
+            <div class="remote-image-container">
+              <img src="https://web-meteo.bmkg.go.id//media/data/bmkg/fdrs/27_sulsel_dc_obs.png" 
+                   class="img-fluid remote-image" 
+                   alt="Potensi Kebakaran Hutan"
+                   data-source="https://web-meteo.bmkg.go.id//media/data/bmkg/fdrs/27_sulsel_dc_obs.png">
+              <div class="heat-map-overlay">
+                <div class="heat-legend">
+                  <div class="heat-item" style="background-color: #00ff00;"></div>
+                  <div class="heat-item" style="background-color: #ffff00;"></div>
+                  <div class="heat-item" style="background-color: #ff9900;"></div>
+                  <div class="heat-item" style="background-color: #ff0000;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="remote-info mt-3">
+              <p class="small mb-1">Hotspot Terdeteksi: <span class="hotspot-count">2</span></p>
+              <p class="small mb-0">Update: <span class="update-time">-</span></p>
+            </div>
+          </div>
+          <div class="remote-footer p-3 bg-light">
+            <a href="https://karhutla.bmkg.go.id/" target="_blank" class="btn btn-sm btn-outline-danger w-100">
+              <i class="bi bi-fire me-1"></i> Pantau Kebakaran
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRAKIRAAN ANGIN - Diperbarui -->
+      <div class="col-lg-3 col-md-6">
+        <div class="remote-card shadow-sm h-100">
+          <div class="remote-header bg-info text-white p-3">
+            <h5 class="mb-0">Prakiraan Angin & Suhu</h5>
+            <small>Ketinggian: 850hPa</small>
+          </div>
+          <div class="remote-body p-3">
+            <div class="remote-image-container">
+              <img src="https://cdn.bmkg.go.id/DataMKG/MEWS/angin/streamline_d1.jpg" 
+                   class="img-fluid remote-image" 
+                   alt="Prakiraan Angin"
+                   data-source="https://cdn.bmkg.go.id/DataMKG/MEWS/angin/streamline_d1.jpg">
+              <div class="wind-info-overlay">
+                <div class="wind-data">
+                  <i class="bi bi-wind"></i>
+                  <span>Toraja: 15 km/jam</span>
+                </div>
+              </div>
+            </div>
+            <div class="remote-info mt-3">
+              <p class="small mb-1">Arah Dominan: Timur Laut</p>
+              <p class="small mb-0">Kecepatan Maks: 35 km/jam</p>
+            </div>
+          </div>
+          <div class="remote-footer p-3 bg-light">
+            <a href="https://web-aviation.bmkg.go.id/" target="_blank" class="btn btn-sm btn-outline-info w-100">
+              <i class="bi bi-graph-up me-1"></i> Analisis Angin
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- POTENSI HUJAN - Diperbarui -->
+      <div class="col-lg-3 col-md-6">
+        <div class="remote-card shadow-sm h-100">
+          <div class="remote-header bg-purple text-white p-3">
+            <h5 class="mb-0">Potensi Curah Hujan</h5>
+            <small>Perkiraan: <span class="rain-potential">20-50mm</span></small>
+          </div>
+          <div class="remote-body p-3">
+            <div class="remote-image-container">
+              <img src="https://inderaja.bmkg.go.id/IMAGE/HIMA/H08_RP_Sulsel.png" 
+                   class="img-fluid remote-image" 
+                   alt="Citra Potensi Hujan"
+                   data-source="https://inderaja.bmkg.go.id/IMAGE/HIMA/H08_RP_Sulsel.png">
+              <div class="rain-overlay">
+                <div class="rain-legend">
+                  <span class="rain-item" style="background-color: #a6f79a;">Rendah</span>
+                  <span class="rain-item" style="background-color: #49c4fa;">Sedang</span>
+                  <span class="rain-item" style="background-color: #0d00fd;">Tinggi</span>
+                </div>
+              </div>
+            </div>
+            <div class="remote-info mt-3">
+              <p class="small mb-1">Wilayah Berpotensi Hujan: 65%</p>
+              <p class="small mb-0">Periode: 3 jam terakhir</p>
+            </div>
+          </div>
+          <div class="remote-footer p-3 bg-light">
+            <a href="https://bmkg.go.id/cuaca/prakiraan-cuaca" target="_blank" class="btn btn-sm btn-outline-purple w-100">
+              <i class="bi bi-cloud-rain-heavy me-1"></i> Prakiraan Hujan
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <div class="update-info bg-light p-3 rounded d-inline-block">
+        <i class="bi bi-info-circle me-2 text-primary"></i>
+        Data diperbarui setiap 30 menit | Sumber: BMKG Pusat
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Custom Styles */
+  .remote-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+  }
+  
+  .remote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .remote-header {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .remote-image-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .remote-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .remote-image-container:hover .remote-image {
+    transform: scale(1.05);
+  }
+  
+  .remote-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .heat-map-overlay, .wind-info-overlay, .rain-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+  }
+  
+  .heat-legend, .rain-legend {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .heat-item {
+    width: 20px;
+    height: 10px;
+    border-radius: 2px;
+  }
+  
+  .rain-item {
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    color: white;
+  }
+  
+  .wind-data {
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .bg-purple {
+    background-color: #6f42c1;
+  }
+  
+  .btn-outline-purple {
+    color: #6f42c1;
+    border-color: #6f42c1;
+  }
+  
+  .btn-outline-purple:hover {
+    background-color: #6f42c1;
+    color: white;
+  }
+  
+  .update-info {
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+</style>
+
+<script>
+  // Fungsi untuk update timestamp
+  function updateTimestamps() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString('id-ID', {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+    
+    document.querySelectorAll('.update-time').forEach(el => {
+      el.textContent = timeString;
+    });
+  }
+  
+  // Update pertama kali
+  updateTimestamps();
+  
+  // Update setiap 30 detik
+  setInterval(updateTimestamps, 30000);
+  
+  // Refresh gambar
+  document.querySelectorAll('.refresh-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const container = this.closest('.remote-image-container');
+      const img = container.querySelector('.remote-image');
+      const src = img.dataset.source;
+      
+      // Tambah parameter cache busting
+      img.src = src + '?t=' + new Date().getTime();
+      
+      // Tampilkan efek loading
+      this.innerHTML = '<div class="spinner-border spinner-border-sm"></div>';
+      setTimeout(() => {
+        this.innerHTML = '<i class="bi bi-arrow-clockwise"></i> Refresh';
+      }, 1000);
+    });
+  });
+  
+  // Inisialisasi lightbox
+  document.querySelectorAll('.remote-image').forEach(img => {
+    img.addEventListener('click', function() {
+      const src = this.dataset.source;
+      // Implementasi lightbox di sini (gunakan library yang sudah ada)
+      lightbox.open({
+        src: src,
+        type: 'image'
+      });
+    });
+  });
+</script>
+
+<!-- Buletin & Berita Section - Tanpa Swiper -->
+<section id="buletin-berita" class="py-5" style="background: linear-gradient(to right, #f8f9fb, #ffffff);">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Buletin Section (Tetap sama) -->
+      <div class="col-lg-7 mb-5 mb-lg-0">
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-square bg-primary text-white me-3">
+            <i class="bi bi-journal-bookmark-fill"></i>
+          </div>
+          <h3 class="mb-0 fw-bold">BULETIN</h3>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Buletin 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm overflow-hidden bulletin-card">
+              <div class="position-relative">
+                <img src="assets/buletin/buletin22024.png" class="card-img-top" alt="Buletin April 2025">
+                <div class="badge bg-primary position-absolute top-0 end-0 m-2">Terbaru</div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Edisi Semester 2 2024</h5>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <a href="assets/buletin/Buletin22024.pdf" target="_blank" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-download me-1"></i> Unduh
+                  </a>
+                  <span class="text-muted small">PDF, 2.4 MB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Buletin 2 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm overflow-hidden bulletin-card">
+              <img src="assets/buletin/buletin12024.png" class="card-img-top" alt="Buletin Mei 2025">
+              <div class="card-body">
+                <h5 class="card-title">Edisi Semester 1 2024</h5>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <a href="assets/buletin/buletin12024.pdf" target="_blank" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-download me-1"></i> Unduh
+                  </a>
+                  <span class="text-muted small">PDF, 1.8 MB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Buletin 3 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm overflow-hidden bulletin-card">
+              <img src="assets/buletin/buletin2023des.png" class="card-img-top" alt="Buletin Maret 2025">
+              <div class="card-body">
+                <h5 class="card-title">Edisi Semester 2 2023</h5>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <a href="assets/buletin/buletin2023.pdf" target="_blank" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-download me-1"></i> Unduh
+                  </a>
+                  <span class="text-muted small">PDF, 2.1 MB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-4">
+          <a href="https://drive.google.com/drive/folders/1OhwSHFOfl5U1P5pLLDz1-w8ZB1TnrVxy" target="_blank" 
+             class="btn btn-link text-primary">
+            <i class="bi bi-arrow-right-circle me-1"></i> Lihat Arsip Buletin Lainnya
+          </a>
+        </div>
+      </div>
+      
+      <!-- Berita Section (Tanpa Swiper) -->
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-square bg-danger text-white me-3">
+            <i class="bi bi-newspaper"></i>
+          </div>
+          <h3 class="mb-0 fw-bold">BERITA</h3>
+        </div>
+        
+        <!-- Berita 1 -->
+        <div class="card border-0 shadow-sm mb-3 news-card">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="Berita/gambarberita/refreshmentinternal.jpg" class="img-fluid rounded-start h-100" alt="Refreshment Internal" style="object-fit: cover;">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body py-2">
+                <span class="badge bg-primary mb-2">Kegiatan</span>
+                <h6 class="card-title fw-semibold mb-1">Tingkatkan Keselamatan Penerbangan, Stasiun Meteorologi Toraja Gelar Refreshment Internal</h6>
+                <p class="card-text small text-muted">Pelatihan internal untuk meningkatkan kompetensi staf dalam bidang meteorologi penerbangan...</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">28 Mei 2025</small>
+                  <a href="#" class="btn btn-sm btn-primary">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Berita 2 -->
+        <div class="card border-0 shadow-sm mb-3 news-card">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="assets/img/berita/longsorpepasan23012025.png" class="img-fluid rounded-start h-100" alt="Analisis Longsor" style="object-fit: cover;">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body py-2">
+                <span class="badge bg-success mb-2">Analisis</span>
+                <h6 class="card-title fw-semibold mb-1">Analisis Longsor Kec. Buntu Pepasan</h6>
+                <p class="card-text small text-muted">Tim BMKG Toraja melakukan analisis mendalam terhadap kejadian longsor di Kecamatan Buntu Pepasan...</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">23 Januari 2025</small>
+                  <a href="berita.html" class="btn btn-sm btn-primary">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Berita 3 -->
+        <div class="card border-0 shadow-sm news-card">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="assets/img/berita/beritakemarau.png" class="img-fluid rounded-start h-100" alt="Musim Kemarau" style="object-fit: cover;">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body py-2">
+                <span class="badge bg-warning text-dark mb-2">Prakiraan</span>
+                <h6 class="card-title fw-semibold mb-1">Perkembangan Musim Kemarau Toraja</h6>
+                <p class="card-text small text-muted">BMKG Toraja memantau perkembangan musim kemarau dan memberikan update terkini untuk masyarakat...</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">04 Juni 2025</small>
+                  <a href="Berita/detail/kemarau2025.html" class="btn btn-sm btn-primary">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-4">
+          <a href="Berita/berita.html" class="btn btn-outline-primary w-100 py-2">
+            <i class="bi bi-arrow-right me-1"></i> Lihat Semua Berita
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Custom Styles for Bulletin & News Section */
+  .icon-square {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bulletin-card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .bulletin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .bulletin-card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .bulletin-card:hover .card-img-top {
+    transform: scale(1.05);
+  }
+  
+  .bulletin-card .card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a365d;
+  }
+  
+  .news-card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    border-color: rgba(43, 108, 176, 0.2);
+  }
+  
+  .news-card .img-fluid {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .news-card .card-title {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+  
+  .news-card .card-text {
+    font-size: 0.85rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+    font-size: 0.8rem;
+  }
+  
+  .btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  @media (max-width: 991px) {
+    .news-card .col-md-4 {
+      width: 40%;
+    }
+    
+    .news-card .col-md-8 {
+      width: 60%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .bulletin-card .card-img-top {
+      height: 150px;
+    }
+    
+    .news-card {
+      flex-direction: column;
+    }
+    
+    .news-card .col-md-4,
+    .news-card .col-md-8 {
+      width: 100%;
+    }
+    
+    .news-card .col-md-4 {
+      height: 180px;
+    }
+    
+    .news-card .col-md-4 img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0 !important;
+    }
+  }
+</style>
+
+
+
+<!-- Gallery Section - Versi Diperbaiki -->
+<section class="gallery-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="d-inline-block mb-3">
+        <div class="icon-square bg-primary text-white me-2">
+          <i class="bi bi-images"></i>
+        </div>
+        <h2 class="d-inline-block mb-0">GALERI BMKG TORAJA</h2>
+      </div>
+      <p class="lead text-muted">Dokumentasi kegiatan dan aktivitas Stasiun Meteorologi Toraja</p>
+    </div>
+
+    <div class="row g-4 gallery-grid">
+      <!-- Item 1 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/galerikegiatan/kepalabpjs.jpg" class="img-fluid" alt="Upacara Hari Meteorologi">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>Kunjungan ke Kantor BPJS Toraja</h5>
+              <p>Kunjungan Plt. Kepala BMKG Toraja ke Kantor BPJS</p>
+            </div>
+            <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" 
+                    data-title="Upacara Hari Meteorologi" 
+                    data-desc="Kegiatan upacara HMD ke-74 di Stamet Toraja, dihadiri kepala UPT dan staf."
+                    data-img="assets/img/galerikegiatan/kepalabpjs.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/galerikegiatan/Sekdatorut.jpg" class="img-fluid" alt="Sosialisasi Iklim">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>Plt. Kepala BMKG berkunjung ke Sekda Torut</h5>
+              <p>Kunjungan dalam membahas peran penting BMKG di wilayah Toraja</p>
+            </div>
+            <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" 
+                    data-title="Sosialisasi Iklim" 
+                    data-desc="Kegiatan sosialisasi iklim di sekolah-sekolah wilayah Toraja."
+                    data-img="assets/img/galerikegiatan/placeholder.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/galerikegiatan/rapatinternal1.jpg" class="img-fluid" alt="Pelatihan Staf">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>Refreshment Internal Stasiun Meteorologi Toraja</h5>
+              <p>Kegiatan Refreshment Internal</p>
+            </div>
+            <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" 
+                    data-title="Pelatihan Staf" 
+                    data-desc="Pelatihan penggunaan peralatan meteorologi bagi staf baru."
+                    data-img="assets/img/galerikegiatan/placeholder.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/galerikegiatan/surveiradar.jpg" class="img-fluid" alt="Kunjungan Kerja">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>Pelaksanaan Survei</h5>
+              <p>Tim BMKG Toraja melakukan survei diwilayah tertinggi di Tana Toraja</p>
+            </div>
+            <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" 
+                    data-title="Kunjungan Kerja" 
+                    data-desc="Kunjungan kerja dari BMKG Pusat ke Stasiun Meteorologi Toraja."
+                    data-img="assets/img/galerikegiatan/placeholder.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/galerikegiatan/poskolebaran.jpg" class="img-fluid" alt="Pemeliharaan Alat">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>BMKG Toraja berpatisipasi dalam kegiatan Posko Ketupat</h5>
+              <p>Kegiatan diikuti oleh beberapa instansi terkait</p>
+            </div>
+            <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" 
+                    data-title="Pemeliharaan Alat" 
+                    data-desc="Kegiatan rutin pemeliharaan peralatan meteorologi."
+                    data-img="assets/img/galerikegiatan/placeholder.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/galerikegiatan/longsor.jpg" class="img-fluid" alt="Rapat Koordinasi">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>Plt. Kepala BMKG turut bergabung dalam survei korban bencana longsor</h5>
+              <p>BMKG turut menghadiri lokasi kejadian longsor</p>
+            </div>
+            <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" 
+                    data-title="Rapat Koordinasi" 
+                    data-desc="Rapat koordinasi triwulanan staf Stamet Toraja."
+                    data-img="assets/img/galerikegiatan/placeholder.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/galerikegiatan/bpjs.jpg" class="img-fluid" alt="Pengamatan Cuaca">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>Kunjungan Plt. Kepala BMKG ke Kominfo</h5>
+              <p>Kegiatan pengamatan cuaca di lapangan</p>
+            </div>
+            <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" 
+                    data-title="Pengamatan Cuaca" 
+                    data-desc="Kegiatan pengamatan cuaca di lapangan oleh petugas BMKG."
+                    data-img="assets/img/galerikegiatan/placeholder.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/galerikegiatan/kerjabakti.jpg" class="img-fluid" alt="Kegiatan Bakti Sosial">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>Kegiatan Kerja Bakti</h5>
+              <p>Kerja Bakti rutin BMKG Toraja</p>
+            </div>
+            <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" 
+                    data-title="Kegiatan Bakti Sosial" 
+                    data-desc="Kegiatan bakti sosial BMKG Toraja di lingkungan masyarakat sekitar."
+                    data-img="assets/img/galerikegiatan/placeholder.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <button class="btn btn-outline-primary btn-load-more">
+        <i class="bi bi-plus-circle me-2"></i> Tampilkan Lebih Banyak
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="row g-0">
+          <div class="col-md-8">
+            <img id="modalImage" src="" class="img-fluid rounded-start" alt="" style="height: 500px; object-fit: cover;">
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 h-100">
+              <h4 id="modalTitle" class="mb-3"></h4>
+              <p id="modalDesc" class="text-muted mb-4"></p>
+              <div class="d-flex justify-content-between mt-auto">
+                <button class="btn btn-sm btn-outline-secondary">
+                  <i class="bi bi-arrow-left"></i> Sebelumnya
+                </button>
+                <button class="btn btn-sm btn-outline-secondary">
+                  Selanjutnya <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Gallery Styles */
+  .gallery-section {
+    background-color: #f8f9fa;
+  }
+  
+  .icon-square {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  .gallery-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    height: 250px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+  
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .gallery-caption {
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+  }
+  
+  .gallery-caption h5 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .gallery-caption p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+  
+  .gallery-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    color: #1a365d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .gallery-item:hover .gallery-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .gallery-btn:hover {
+    background: white;
+    color: #e63946;
+  }
+  
+  .btn-load-more {
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .btn-load-more:hover {
+    background-color: #1a365d;
+    color: white;
+  }
+  
+  @media (max-width: 767px) {
+    .gallery-item {
+      height: 200px;
+    }
+    
+    .gallery-overlay {
+      padding: 15px;
+    }
+    
+    .gallery-caption h5 {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  // Gallery Modal Functionality
+  const galleryModal = document.getElementById('galleryModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDesc = document.getElementById('modalDesc');
+  
+  galleryModal.addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+    const imgSrc = button.getAttribute('data-img');
+    const title = button.getAttribute('data-title');
+    const description = button.getAttribute('data-desc');
+    
+    modalImage.src = imgSrc;
+    modalTitle.textContent = title;
+    modalDesc.textContent = description;
+  });
+  
+  // Load More Button (Placeholder functionality)
+  document.querySelector('.btn-load-more').addEventListener('click', function() {
+    alert('Fungsi "Tampilkan Lebih Banyak" akan menampilkan foto galeri tambahan. Anda dapat menambahkan lebih banyak gambar di sini.');
+  });
+</script>
+
+
+<!-- Contact Section -->
+<section class="contact section" id="contact">
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+<h2>Contact</h2>
+<p>Kami berkomitmen dalam memberikan pelayanan bagi masyarakat. Silahkan hubungi kami melalui kunjungan langsung ke kantor BMKG Toraja maupun melalui telepon, email, dan platform media sosial Kami.</p>
+</div><!-- End Section Title -->
+<div class="container" data-aos="fade-up" data-aos-delay="100">
+<div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d797.9852644362555!2d119.9120489!3d-3.1870618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d93f7001aa565d7%3A0xd342ecc479267c49!2sKantor%20Baru%20BMKG!5e0!3m2!1sen!2sid!4v1700000000000" style="border:0; width: 100%; height: 270px;">
+</iframe>
+</div><!-- End Google Maps -->
+<div class="row gy-4">
+<div class="col-lg-4">
+<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+<i class="bi bi-geo-alt flex-shrink-0"></i>
+<div>
+<h3>Alamat Kami</h3>
+<p>Jl. Bandara Toraja, Kecamatan Mengkendek, Kabupaten Tana Toraja, Sulawesi Selatan</p>
+</div>
+</div><!-- End Info Item -->
+<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+<i class="bi bi-telephone flex-shrink-0"></i>
+<div>
+<h3>Telepon Kami</h3>
+<p>+62 811-4209-533</p>
+</div>
+</div><!-- End Info Item -->
+<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+<i class="bi bi-envelope flex-shrink-0"></i>
+<div>
+<h3>Email Kami</h3>
+<p>stamet.toraja@bmkg.go.id</p>
+<p>bmkg.toraja@gmail.com</p>
+</div>
+</div><!-- End Info Item -->
+</div>
+<div class="col-lg-8">
+<form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
+<div class="row gy-4">
+<div class="col-md-6">
+<input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
+</div>
+<div class="col-md-6">
+<input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
+</div>
+<div class="col-md-12">
+<input class="form-control" name="subject" placeholder="Subject" required="" type="text"/>
+</div>
+<div class="col-md-12">
+<textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea>
+</div>
+<div class="col-md-12 text-center">
+<div class="loading">Loading</div>
+<div class="error-message"></div>
+<div class="sent-message">Your message has been sent. Thank you!</div>
+<button type="submit">Send Message</button>
+</div>
+</div>
+</form>
+</div><!-- End Contact Form -->
+</div>
+</div>
+</section><!-- /Contact Section -->
+</main>
+<footer class="footer dark-background" id="footer">
+<div class="container footer-top">
+<div class="row gy-4">
+<div class="col-lg-5 col-md-12 footer-about">
+<a class="logo d-flex align-items-center" href="index.html">
+<span class="sitename">BMKG TORAJA</span>
+</a>
+<p>Stasiun Meteorologi Kelas IV Toraja</p>
+<p>Jl. Bandara Toraja, Kec. Mengkendek, Kab. Tana Toraja</p>
+<div class="social-links d-flex mt-4">
+<a href="https://www.facebook.com/bmkgtoraja"><i class="bi bi-facebook"></i></a>
+<a href="https://www.instagram.com/bmkgtoraja/?hl=en"><i class="bi bi-instagram"></i></a>
+</div>
+</div>
+<div class="col-lg-2 col-6 footer-links">
+<h4>Pelayanan Kami</h4>
+<ul>
+<li><a href="#"><i class="bi bi-arrow-right-circle"></i> Tentang Kami</a></li>
+<li><a href="#"><i class="bi bi-arrow-right-circle"></i> Prakiraan Cuaca</a></li>
+<li><a href="#"><i class="bi bi-arrow-right-circle"></i> Permohonan Data</a></li>
+<li><a href="#"><i class="bi bi-arrow-right-circle"></i> Informasi Tarif PNBP</a></li>
+<li><a href="#"><i class="bi bi-arrow-right-circle"></i> FAQ</a></li>
+</ul>
+</div>
+<div class="col-lg-2 col-6 footer-links">
+<h4>Link Terkait</h4>
+<ul>
+<li><a href="https://www.bmkg.go.id/"><i class="bi bi-arrow-right-circle"></i>BMKG Pusat</a></li>
+<li><a href="https://stmkg.ac.id/"><i class="bi bi-arrow-right-circle"></i>Kampus STMKG</a></li>
+<li><a href="https://web-aviation.bmkg.go.id/"><i class="bi bi-arrow-right-circle"></i>Cuaca Penerbangan</a></li>
+<li><a href="https://maritim.bmkg.go.id/"><i class="bi bi-arrow-right-circle"></i>Cuaca Maritim</a></li>
+<li><a href="https://inatews.bmkg.go.id/"><i class="bi bi-arrow-right-circle"></i>InaTEWS</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+<h4>Hubungi Kami</h4>
+<p>Jl. Bandara Toraja, Kec. Mengkendek</p>
+<p>Kabupaten Tana Toraja, Kode Pos 91870</p>
+<p>Sulawesi Selatan</p>
+<p class="mt-4"><strong>Phone:</strong> <span>+62 811-4209-533</span></p>
+<p><strong>Email:</strong> <span>stamet.toraja@bmkg.go.id</span></p>
+</div>
+</div>
+</div>
+<div class="container copyright text-center mt-4">
+<p>© <span>Copyright</span> <strong class="px-1 sitename">BMKG TORAJA</strong> <span></span></p>
+</div>
+</footer>
+<!-- Scroll Top -->
+<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Preloader -->
+<div id="preloader"></div>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cuaca.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const kecSelect = document.getElementById('kecamatanSelect');
+    const container = document.getElementById('weather24jam');
+
+    function fetchCuaca(kodeAdm3) {
+      container.innerHTML = '<p>Memuat data...</p>';
+      fetch(`https://cuaca.bmkg.go.id/api/df/v1/forecast/adm?adm3=${kodeAdm3}`)
+        .then(res => res.json())
+        .then(data => {
+          container.innerHTML = '';
+          const cuacaList = data.data[0].cuaca.slice(0, 24); // Ambil 24 jam
+          cuacaList.forEach(item => {
+            const jam = new Date(item.local_datetime).getHours().toString().padStart(2, '0');
+            const card = document.createElement('div');
+            card.className = 'card text-center p-2 shadow-sm';
+            card.style.width = '110px';
+            card.innerHTML = `
+              <small>${jam}:00</small>
+              <img src="${item.image}" alt="${item.weather_desc}" width="40">
+              <small>${item.weather_desc}</small>
+              <small class="text-muted">${item.t}°C, ${item.hu}%</small>
+            `;
+            container.appendChild(card);
+          });
+        })
+        .catch(err => {
+          container.innerHTML = '<p class="text-danger">Gagal memuat data cuaca.</p>';
+          console.error(err);
+        });
+    }
+
+    if (kecSelect) {
+      kecSelect.addEventListener('change', e => fetchCuaca(e.target.value));
+      fetchCuaca(kecSelect.value); // Default
+    }
+  });
+</script>
+<!-- Swiper JS (di bawah sebelum </body>) -->
+<script>
+  const berita1 = new Swiper('.beritaSwiper1', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.beritaSwiper1 .swiper-button-next',
+      prevEl: '.beritaSwiper1 .swiper-button-prev',
+    },
+  });
+
+  const berita2 = new Swiper('.beritaSwiper2', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.beritaSwiper2 .swiper-button-next',
+      prevEl: '.beritaSwiper2 .swiper-button-prev',
+    },
+  });
+
+  const berita3 = new Swiper('.beritaSwiper3', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.beritaSwiper3 .swiper-button-next',
+      prevEl: '.beritaSwiper3 .swiper-button-prev',
+    },
+  });
+</script>
+<script>
+function openModal(gambarFile, judul, deskripsi) {
+  document.getElementById('modalImage').src = 'assets/img/galerikegiatan/' + gambarFile;
+  document.getElementById('modalTitle').textContent = judul;
+  document.getElementById('modalDesc').textContent = deskripsi;
+
+  const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
+  modal.show();
+}
+</script>
+<script src="assets/js/gempa.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</body>
+</html>
