@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Berita BMKG Toraja</title>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+    
+    <!-- Favicons -->
+    <link rel="icon" href="../../assets/img/bg/favicon.ico" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Vendor CSS Files -->
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+    
+    <!-- Main CSS File -->
+    <link href="../../assets/css/main.css" rel="stylesheet"/>
+    
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #e63946;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fb;
+            color: #333;
+        }
+        
+        /* Navbar styling */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .navbar-brand .sitename {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark);
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+        
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        .dropdown-item {
+            padding: 0.5rem 1.5rem;
+            transition: all 0.2s;
+        }
+        
+        .dropdown-item:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            margin-left: 0.5rem;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(120deg, #1a365d 0%, #2a5599 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/img/bg/pattern.svg') repeat;
+            opacity: 0.1;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .section-title h2 {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        /* News Cards */
+        .news-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            background: white;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+        
+        .news-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .news-card:hover .news-img {
+            transform: scale(1.05);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .news-category {
+            display: inline-block;
+            padding: 0.25rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+        
+        .category-activity {
+            background-color: rgba(26, 54, 93, 0.1);
+            color: var(--primary);
+        }
+        
+        .category-analysis {
+            background-color: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+        }
+        
+        .category-forecast {
+            background-color: rgba(255, 193, 7, 0.1);
+            color: #ffc107;
+        }
+        
+        .category-weather {
+            background-color: rgba(23, 162, 184, 0.1);
+            color: #17a2b8;
+        }
+        
+        .card-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+        }
+        
+        .card-text {
+            color: var(--gray);
+            margin-bottom: 1.2rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .news-date {
+            display: flex;
+            align-items: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .news-date i {
+            margin-right: 0.5rem;
+        }
+        
+        .btn-read-more {
+            display: inline-flex;
+            align-items: center;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn-read-more:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            color: white;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #f1f1f1;
+            color: var(--primary);
+        }
+        
+        .popular-news {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .popular-item {
+            display: flex;
+            margin-bottom: 1.2rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .popular-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .popular-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 1rem;
+        }
+        
+        .popular-content {
+            flex: 1;
+        }
+        
+        .popular-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+            color: var(--dark);
+        }
+        
+        .popular-date {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        
+        .category-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .category-item {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .category-item:last-child {
+            border-bottom: none;
+        }
+        
+        .category-link {
+            display: flex;
+            justify-content: space-between;
+            color: var(--dark);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .category-link:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .category-count {
+            background: var(--light);
+            color: var(--gray);
+            padding: 0.1rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        /* Pagination */
+        .pagination {
+            margin-top: 3rem;
+            justify-content: center;
+        }
+        
+        .page-link {
+            margin: 0 5px;
+            border-radius: 8px !important;
+            border: none;
+            color: var(--dark);
+            font-weight: 500;
+            min-width: 40px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .page-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .page-item.active .page-link {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a365d;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-title {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+        
+        .footer-links {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-bottom {
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .main-content {
+                padding: 2.5rem 0;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ======= Header / Navbar ======= -->
+    <header class="header d-flex align-items-center sticky-top" id="header">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a class="logo d-flex align-items-center me-auto me-xl-0" href="index.html">
+                <img alt="Logo BMKG" class="logo-img" src="../../assets/img/about/BMKG (1).png"/>
+                <h1 class="sitename ms-2">BMKG TORAJA</h1>
+            </a>
+            
+            <!-- Navigation -->
+            <nav class="navmenu" id="navmenu">
+                <ul>
+                    <li><a href="../../index.html">Beranda</a></li>
+                    <li class="dropdown">
+                        <a><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="sejarah.html">Sejarah</a></li>
+                            <li><a href="visimisi.html">Visi dan Misi</a></li>
+                            <li><a href="struktur.html">Struktur Organisasi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="berita.html" class="active">Berita</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-social-links">
+                <a class="whatsapp" href="https://wa.me/628114209533" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                <a class="facebook" href="https://www.facebook.com/share/15fMkZVo8p/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a class="instagram" href="https://www.instagram.com/bmkgtoraja/" target="_blank"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======= Hero Section ======= -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">Berita Terkini BMKG Toraja</h1>
+                    <p class="hero-subtitle">Informasi terbaru seputar aktivitas, analisis cuaca, dan kegiatan Stasiun Meteorologi Toraja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Main Content ======= -->
+    <section class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- News Content -->
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Berita Terbaru</h2>
+                        <p>Update informasi terkini dari Stasiun Meteorologi Toraja</p>
+                    </div>
+                    
+                    <div class="row">
+                        <!-- News Item 1 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="news-card">
+                                <img src="../../assets/img/berita/refreshmentinternal.jpg" class="news-img" alt="Refreshment Internal">
+                                <div class="card-body">
+                                    <span class="news-category category-activity">Kegiatan</span>
+                                    <h5 class="card-title">Tingkatkan Keselamatan Penerbangan, Stasiun Meteorologi Toraja Gelar Refreshment Internal</h5>
+                                    <p class="card-text">Pelatihan internal untuk meningkatkan kompetensi staf dalam bidang meteorologi penerbangan dan pengamatan cuaca terkini.</p>
+                                    <div class="news-date">
+                                        <i class="bi bi-calendar"></i> 28 Mei 2025
+                                    </div>
+                                    <a href="berita/detail/refreshment-internal.html" class="btn-read-more">
+                                        Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- News Item 2 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="news-card">
+                                <img src="../../assets/img/berita/longsorpepasan23012025.png" class="news-img" alt="Analisis Longsor">
+                                <div class="card-body">
+                                    <span class="news-category category-analysis">Analisis</span>
+                                    <h5 class="card-title">Analisis Longsor Kec. Buntu Pepasan</h5>
+                                    <p class="card-text">Tim BMKG Toraja melakukan analisis mendalam terhadap kejadian longsor di Kecamatan Buntu Pepasan dan memberikan rekomendasi mitigasi.</p>
+                                    <div class="news-date">
+                                        <i class="bi bi-calendar"></i> 23 Januari 2025
+                                    </div>
+                                    <a href="berita/detail/analisis-longsor.html" class="btn-read-more">
+                                        Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- News Item 3 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="news-card">
+                                <img src="../../assets/img/berita/beritakemarau.png" class="news-img" alt="Musim Kemarau">
+                                <div class="card-body">
+                                    <span class="news-category category-forecast">Prakiraan</span>
+                                    <h5 class="card-title">Perkembangan Musim Kemarau Toraja</h5>
+                                    <p class="card-text">BMKG Toraja memantau perkembangan musim kemarau dan memberikan update terkini untuk masyarakat dan sektor pertanian.</p>
+                                    <div class="news-date">
+                                        <i class="bi bi-calendar"></i> 04 Juni 2025
+                                    </div>
+                                    <a href="berita/detail/kemarau2025.html" class="btn-read-more">
+                                        Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- News Item 4 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="news-card">
+                                <img src="../../assets/img/berita/workshop.jpg" class="news-img" alt="Workshop">
+                                <div class="card-body">
+                                    <span class="news-category category-activity">Kegiatan</span>
+                                    <h5 class="card-title">Workshop Pemahaman Cuaca untuk Petani Toraja</h5>
+                                    <p class="card-text">BMKG Toraja menyelenggarakan workshop untuk membantu petani memahami informasi cuaca dan iklim dalam pengelolaan pertanian.</p>
+                                    <div class="news-date">
+                                        <i class="bi bi-calendar"></i> 15 April 2025
+                                    </div>
+                                    <a href="berita/detail/workshop-petani.html" class="btn-read-more">
+                                        Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- News Item 5 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="news-card">
+                                <img src="../../assets/img/berita/pemeliharaan-alat.jpg" class="news-img" alt="Pemeliharaan Alat">
+                                <div class="card-body">
+                                    <span class="news-category category-activity">Kegiatan</span>
+                                    <h5 class="card-title">Pemeliharaan Rutin Peralatan Pengamatan Cuaca</h5>
+                                    <p class="card-text">Tim teknis BMKG Toraja melakukan pemeliharaan rutin peralatan pengamatan cuaca untuk memastikan akurasi data meteorologi.</p>
+                                    <div class="news-date">
+                                        <i class="bi bi-calendar"></i> 10 Maret 2025
+                                    </div>
+                                    <a href="berita/detail/pemeliharaan-alat.html" class="btn-read-more">
+                                        Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- News Item 6 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="news-card">
+                                <img src="../../assets/img/berita/analisis-iklim.jpg" class="news-img" alt="Analisis Iklim">
+                                <div class="card-body">
+                                    <span class="news-category category-analysis">Analisis</span>
+                                    <h5 class="card-title">Analisis Perubahan Pola Iklim Toraja 5 Tahun Terakhir</h5>
+                                    <p class="card-text">Laporan komprehensif analisis perubahan pola iklim di wilayah Toraja dan implikasinya terhadap kehidupan masyarakat.</p>
+                                    <div class="news-date">
+                                        <i class="bi bi-calendar"></i> 28 Februari 2025
+                                    </div>
+                                    <a href="berita/detail/analisis-iklim.html" class="btn-read-more">
+                                        Baca Selengkapnya <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Sebelumnya</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Selanjutnya</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Popular News -->
+                    <div class="sidebar">
+                        <h3 class="sidebar-title">Berita Populer</h3>
+                        <ul class="popular-news">
+                            <li class="popular-item">
+                                <img src="../../assets/img/berita/analisis-iklim.jpg" class="popular-img" alt="Analisis Iklim">
+                                <div class="popular-content">
+                                    <a href="#" class="popular-title">Analisis Perubahan Pola Iklim Toraja 5 Tahun Terakhir</a>
+                                    <div class="popular-date">28 Februari 2025</div>
+                                </div>
+                            </li>
+                            <li class="popular-item">
+                                <img src="assets/img/berita/longsorpepasan23012025.png" class="popular-img" alt="Analisis Longsor">
+                                <div class="popular-content">
+                                    <a href="#" class="popular-title">Analisis Longsor Kec. Buntu Pepasan</a>
+                                    <div class="popular-date">23 Januari 2025</div>
+                                </div>
+                            </li>
+                            <li class="popular-item">
+                                <img src="assets/img/berita/pemeliharaan-alat.jpg" class="popular-img" alt="Pemeliharaan Alat">
+                                <div class="popular-content">
+                                    <a href="#" class="popular-title">Pemeliharaan Rutin Peralatan Pengamatan Cuaca</a>
+                                    <div class="popular-date">10 Maret 2025</div>
+                                </div>
+                            </li>
+                            <li class="popular-item">
+                                <img src="assets/img/berita/workshop.jpg" class="popular-img" alt="Workshop">
+                                <div class="popular-content">
+                                    <a href="#" class="popular-title">Workshop Pemahaman Cuaca untuk Petani Toraja</a>
+                                    <div class="popular-date">15 April 2025</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="sidebar">
+                        <h3 class="sidebar-title">Kategori Berita</h3>
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <a href="#" class="category-link">
+                                    Kegiatan
+                                    <span class="category-count">12</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link">
+                                    Analisis Cuaca
+                                    <span class="category-count">8</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link">
+                                    Prakiraan Cuaca
+                                    <span class="category-count">15</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link">
+                                    Informasi Publik
+                                    <span class="category-count">7</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link">
+                                    Peringatan Dini
+                                    <span class="category-count">5</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link">
+                                    Teknologi
+                                    <span class="category-count">4</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>      
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Footer ======= -->
+    <footer class="footer dark-background" id="footer">
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-about">
+                    <a class="logo d-flex align-items-center" href="index.html">
+                        <span class="sitename">BMKG TORAJA</span>
+                    </a>
+                    <p>Stasiun Meteorologi Kelas IV Toraja</p>
+                    <p>Jl. Bandara Toraja, Kec. Mengkendek, Kab. Tana Toraja</p>
+                    <div class="social-links d-flex mt-4">
+                        <a href="https://www.facebook.com/bmkgtoraja"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/bmkgtoraja/?hl=en"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/628114209533"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4 class="footer-title">Pelayanan Kami</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="bi bi-arrow-right-circle"></i> Tentang Kami</a></li>
+                        <li><a href="#"><i class="bi bi-arrow-right-circle"></i> Prakiraan Cuaca</a></li>
+                        <li><a href="#"><i class="bi bi-arrow-right-circle"></i> Permohonan Data</a></li>
+                        <li><a href="#"><i class="bi bi-arrow-right-circle"></i> Informasi Tarif PNBP</a></li>
+                        <li><a href="#"><i class="bi bi-arrow-right-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4 class="footer-title">Link Terkait</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.bmkg.go.id/"><i class="bi bi-arrow-right-circle"></i> BMKG Pusat</a></li>
+                        <li><a href="https://stmkg.ac.id/"><i class="bi bi-arrow-right-circle"></i> Kampus STMKG</a></li>
+                        <li><a href="https://web-aviation.bmkg.go.id/"><i class="bi bi-arrow-right-circle"></i> Cuaca Penerbangan</a></li>
+                        <li><a href="https://maritim.bmkg.go.id/"><i class="bi bi-arrow-right-circle"></i> Cuaca Maritim</a></li>
+                        <li><a href="https://inatews.bmkg.go.id/"><i class="bi bi-arrow-right-circle"></i> InaTEWS</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4 class="footer-title">Hubungi Kami</h4>
+                    <p>Jl. Bandara Toraja, Kec. Mengkendek</p>
+                    <p>Kabupaten Tana Toraja, Kode Pos 91870</p>
+                    <p>Sulawesi Selatan</p>
+                    <p class="mt-4"><strong>Phone:</strong> <span>+62 811-4209-533</span></p>
+                    <p><strong>Email:</strong> <span>stamet.toraja@bmkg.go.id</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <div class="copyright">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">BMKG TORAJA</strong> <span>2025</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Main JS File -->
+    <script src="../../assets/js/main.js"></script>
+    
+    <script>
+        // Highlight active nav link
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-nav-toggle');
+            const navmenu = document.getElementById('navmenu');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navmenu.classList.toggle('mobile-nav-active');
+                    this.classList.toggle('bi-list');
+                    this.classList.toggle('bi-x');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
